@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-
 const API_URL = "http://localhost:8080/api/reviews";
-
 function App() {
   const [page, setPage] = useState("create");
   const [books, setBooks] = useState([]);
@@ -15,7 +13,6 @@ function App() {
     rating: "",
     reviewText: ""
   });
-
   // 🔹 Load reviews from backend
   useEffect(() => {
     fetch(API_URL)
